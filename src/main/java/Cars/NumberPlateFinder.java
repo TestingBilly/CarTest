@@ -12,11 +12,10 @@ import java.util.Vector;
 import java.util.regex.*;
 
 public class NumberPlateFinder {
+    public Vector<String> Numbers = new Vector<>();
 
+    public void main(String[] args) throws Exception {
 
-    public static void main(String[] args) throws Exception {
-        Vector<String> Numbers = new Vector<>();
-        Vector<String> NumberPlates = new Vector<>();
 
         String output = new String(Files.readAllBytes(Paths.get("C:\\Users\\billy\\IdeaProjects\\CarTester\\car_input.txt"))).replaceAll("\\s+", "");
         //System.out.println(output);
@@ -37,7 +36,9 @@ public class NumberPlateFinder {
 
     }
 
-
+    public Vector<String> getNumbers() {
+        return Numbers;
+    }
 }
 
 
