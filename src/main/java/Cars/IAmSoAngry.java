@@ -65,7 +65,7 @@ public class  IAmSoAngry {
     driver.findElement(By.cssSelector(".jsx-497547138:nth-child(2)")).click();
     driver.findElement(By.cssSelector(".jsx-3517272246:nth-child(1) > .jsx-3496807389")).click();
     driver.findElement(By.cssSelector(".jsx-3499070155:nth-child(2) > .jsx-3517272246:nth-child(2)")).click();
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     {
       WebElement element = driver.findElement(By.xpath("//dl[2]/dd"));
       String make = element.getText();

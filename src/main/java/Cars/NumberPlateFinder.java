@@ -28,7 +28,6 @@ public class NumberPlateFinder {
         }
         for (String plates :Numbers )
         {
-            System.out.println(plates);
         }
 
     }
