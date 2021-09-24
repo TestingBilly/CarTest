@@ -14,10 +14,15 @@ import java.util.regex.*;
 public class NumberPlateFinder {
     public Vector<String> Numbers = new Vector<>();
 
-    public void main(String[] args) throws Exception {
+    public void stress()  {
 
 
-        String output = new String(Files.readAllBytes(Paths.get("C:\\Users\\billy\\IdeaProjects\\CarTester\\car_input.txt"))).replaceAll("\\s+", "");
+        String output = null;
+        try {
+            output = new String(Files.readAllBytes(Paths.get("C:\\Users\\billy\\IdeaProjects\\CarTester\\car_input.txt"))).replaceAll("\\s+", "");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //System.out.println(output);
 
         Pattern pattern = Pattern.compile("[A-Z]{2}[0-9]{2}[A-Z]{3}");
