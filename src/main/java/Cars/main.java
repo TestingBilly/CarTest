@@ -3,7 +3,7 @@ package Cars;
 public class main {
     public static void main(String[] args)  {
         NumberPlateFinder hello = new NumberPlateFinder();
-        IAmSoAngry j = new IAmSoAngry();
+        seleiniumChecker j = new seleiniumChecker();
 
         try {
             hello.stress();

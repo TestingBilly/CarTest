@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-public class  IAmSoAngry {
+public class seleiniumChecker {
 
   private WebDriver driver;
   private Map<String, Object> vars;
@@ -56,12 +56,10 @@ public class  IAmSoAngry {
       String make = element.getText();
       output[1] = make;
     }
-;
     {
       WebElement element = driver.findElement(By.xpath("//dl[3]/dd"));
       String model = element.getText();
       output[2] = model;
-
     }
     {
       WebElement element = driver.findElement(By.xpath("//dl[4]/dd"));
@@ -89,7 +87,7 @@ public class  IAmSoAngry {
 
     List<String[]> outputs= new ArrayList<>();
     for (String inPut : inputs) {
-      IAmSoAngry run = new IAmSoAngry();
+      seleiniumChecker run = new seleiniumChecker();
       run.setUp();
       String[] getOutputs = run.iAmSoAngry(inPut);
       run.tearDown();
