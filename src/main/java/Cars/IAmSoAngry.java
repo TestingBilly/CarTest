@@ -22,16 +22,17 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 
-public class IAmSoAngry {
+public class  IAmSoAngry {
 
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
 
- // NumberPlateFinder charlie = new NumberPlateFinder();
- // charlie.getNumbers;
+//NumberPlateFinder charlie = new NumberPlateFinder();
+//charlie.getNumbers;
 
 
   public void setUp() {
@@ -64,35 +65,28 @@ public class IAmSoAngry {
     driver.findElement(By.cssSelector(".jsx-497547138:nth-child(2)")).click();
     driver.findElement(By.cssSelector(".jsx-3517272246:nth-child(1) > .jsx-3496807389")).click();
     driver.findElement(By.cssSelector(".jsx-3499070155:nth-child(2) > .jsx-3517272246:nth-child(2)")).click();
-
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     {
       WebElement element = driver.findElement(By.xpath("//dl[2]/dd"));
       String make = element.getText();
       output[1] = make;
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
     }
 ;
     {
       WebElement element = driver.findElement(By.xpath("//dl[3]/dd"));
       String model = element.getText();
       output[2] = model;
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).clickAndHold().perform();
+
     }
     {
       WebElement element = driver.findElement(By.xpath("//dl[4]/dd"));
       String colour = element.getText();
       output[3] = colour;
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
     }
     {
       WebElement element = driver.findElement(By.xpath("//dl[5]/dd"));
       String year = element.getText();
       output[4] = year;
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).release().perform();
     }
     driver.findElement(By.cssSelector(".jsx-3499070155:nth-child(2) > .jsx-3517272246:nth-child(3)")).click();
     driver.findElement(By.cssSelector(".jsx-3517272246:nth-child(4) > .jsx-3496807389")).click();

@@ -28,11 +28,8 @@ public class NumberPlateFinder {
         }
         for (String plates :Numbers )
         {
-            PrintStream out = new PrintStream(new FileOutputStream("plateOutput.txt"));
-            System.setOut(out);
-
+            System.out.println(plates);
         }
-
 
     }
 
